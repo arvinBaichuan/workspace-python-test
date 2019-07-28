@@ -1,4 +1,4 @@
-#!/usr/bin/env python  
+#! python3
 # encoding: utf-8  
 
 

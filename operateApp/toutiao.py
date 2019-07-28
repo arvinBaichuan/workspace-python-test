@@ -1,14 +1,14 @@
-#!/usr/bin/env python
+#! python3
 # encoding: utf-8
 
-__author__ = "pascal"
+__author__ = "arvin"
 
 from airtest.core.api import *
 from poco.exceptions import PocoNoSuchNodeException
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 import random
 import datetime
-from python.myutils.device_utils import *
+from myutils.device_utils import *
 
 # 应用包名和启动Activity
 package_name = 'com.songheng.eastnews'
@@ -18,9 +18,9 @@ activity = 'com.oa.eastfirst.activity.WelcomeActivity'
 # 新闻父节点
 btn_news_root='com.songheng.eastnews:id/fu'
 # 新闻标题
-btn_news_node_title='com.songheng.eastnews:id/or'
+btn_news_node_title='com.songheng.eastnews:id/pn'
 # 新闻作者
-btn_news_node_author='com.songheng.eastnews:id/a3y'
+btn_news_node_author='com.songheng.eastnews:id/a5a'
 # 视频页签按钮
 btn_video='com.songheng.eastnews:id/js'
 # 视频父节点
@@ -37,11 +37,11 @@ btn_continue='com.songheng.eastnews:id/x1'
 btn_receive='com.songheng.eastnews:id/aqv'
 
 #无线连接手机
-device_1 = connect_device('android:///192.168.0.102:8888?cap_method=javacap&touch_method=adb')
+device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
 
 #usb连接手机
 # 设备id
-# device_id = 'cb49d48'
+# device_id = '04d26c667d2b'
 # device_1 = Android(device_id)
 
 poco = AndroidUiautomationPoco(device_1, use_airtest_input=True, screenshot_each_action=False)
