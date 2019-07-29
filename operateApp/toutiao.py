@@ -4,6 +4,7 @@
 __author__ = "arvin"
 
 from airtest.core.api import *
+from airtest.core.android.android import *
 from poco.exceptions import PocoNoSuchNodeException
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 import random
@@ -37,12 +38,13 @@ btn_continue='com.songheng.eastnews:id/x1'
 btn_receive='com.songheng.eastnews:id/aqv'
 
 #无线连接手机
-device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
+#device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
+#device_1 = connect_device('android:///192.168.0.104:48887?cap_method=javacap&touch_method=adb')
 
 #usb连接手机
 # 设备id
-# device_id = '04d26c667d2b'
-# device_1 = Android(device_id)
+device_id = '04d26c667d2b'
+device_1 = Android(device_id)
 
 poco = AndroidUiautomationPoco(device_1, use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
