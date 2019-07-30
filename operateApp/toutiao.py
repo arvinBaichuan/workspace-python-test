@@ -37,12 +37,12 @@ btn_continue='com.songheng.eastnews:id/x1'
 # 领取顶部金币
 btn_receive='com.songheng.eastnews:id/aqv'
 
-#无线连接手机
+#无线连接手机，比较稳定
 #device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
-device_1 = connect_device('android:///192.168.0.104:48887?cap_method=javacap&touch_method=adb')
+device_1 = connect_device('android:///192.168.0.115:48887?cap_method=javacap&touch_method=adb')
 
 #usb连接手机
-# 设备id
+# 设备id 连接后端口不稳定
 #device_id = '04d26c667d2b'
 #device_1 = Android(device_id)
 
