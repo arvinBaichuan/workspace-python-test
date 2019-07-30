@@ -15,44 +15,45 @@ from myutils.device_utils import *
 package_name = 'com.songheng.eastnews'
 activity = 'com.oa.eastfirst.activity.WelcomeActivity'
 
-
-# 新闻父节点
-btn_news_root='com.songheng.eastnews:id/ki'
+# 新闻列表
+btn_news_root = 'com.songheng.eastnews:id/go'
 # 新闻标题
-btn_news_node_title='com.songheng.eastnews:id/le'
+btn_news_node_title = 'com.songheng.eastnews:id/pn'
 # 新闻作者
-btn_news_node_author='com.songheng.eastnews:id/a5a'
-# 视频页签按钮
-btn_video='com.songheng.eastnews:id/km'
-# 视频父节点
-btn_video_root='com.songheng.eastnews:id/a0j'
+btn_news_node_author = 'com.songheng.eastnews:id/a5a'
+# 视频页按钮
+btn_video = 'com.songheng.eastnews:id/km'
+# 视频列表
+btn_video_root = 'com.songheng.eastnews:id/go'
 # 视频标题
-btn_video_node_title='com.songheng.eastnews:id/pn'
+btn_video_node_title = 'com.songheng.eastnews:id/pn'
 # 视频播放按钮
-btn_video_node_play='com.songheng.eastnews:id/qb'
+btn_video_node_play = 'com.songheng.eastnews:id/a57'
 # 视频标签
-vedio_flag='com.songheng.eastfirst.business.video.view.widget.ijkplayer.h'
+vedio_flag = 'com.songheng.eastfirst.business.video.view.widget.ijkplayer.h'
 # 继续赚钱
-btn_continue='com.songheng.eastnews:id/x1'
+btn_continue = 'com.songheng.eastnews:id/x1'
 # 领取顶部金币
-btn_receive='com.songheng.eastnews:id/aqv'
+btn_receive = 'com.songheng.eastnews:id/asc'
 
-#无线连接手机，比较稳定
-#device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
+# 无线连接手机，比较稳定
+# device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
 device_1 = connect_device('android:///192.168.0.115:48887?cap_method=javacap&touch_method=adb')
 
-#usb连接手机
+# usb连接手机
 # 设备id 连接后端口不稳定
-#device_id = '04d26c667d2b'
-#device_1 = Android(device_id)
+# device_id = '04d26c667d2b'
+# device_1 = Android(device_id)
 
 poco = AndroidUiautomationPoco(device_1, use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
+
 
 class DongFangTouTiao(object):
     """
     东方头条
     """
+
     def __init__(self):
         # 保留最新的5条新闻标题
         self.news_titles = []
@@ -81,6 +82,7 @@ class DongFangTouTiao(object):
         # self.__video()
         # 5.看小视频
         # self.mini_video()
+
     def watch_nuws(self):
         try:
             while True:
@@ -329,7 +331,6 @@ class DongFangTouTiao(object):
         exit_dialog_tips_element = poco('com.songheng.eastnews:id/xm')
         if exit_dialog_tips_element.exists():
             self.__back_keyevent()
-
 
     def __read_key_news(self):
         """
