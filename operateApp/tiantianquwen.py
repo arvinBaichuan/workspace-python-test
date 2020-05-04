@@ -4,7 +4,7 @@
 __author__ = "arvin"
 
 from airtest.core.api import *
-from airtest.core.android.android import *
+# from airtest.core.android.android import *
 from poco.exceptions import PocoNoSuchNodeException
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 import random
@@ -12,15 +12,15 @@ import datetime
 from myutils.device_utils import *
 
 # 应用包名和启动Activity
-package_name = 'com.songheng.eastnews'
+package_name = 'com.ttyouqu.app'
 activity = 'com.oa.eastfirst.activity.WelcomeActivity'
 
 # 新闻列表
-btn_news_root = 'com.songheng.eastnews:id/go'
+btn_news_root = 'com.ttyouqu.app:id/smart_refresh_layout'
 # 新闻标题
-btn_news_node_title = 'com.songheng.eastnews:id/pn'
+btn_news_node_title = 'com.ttyouqu.app:id/tv_title'
 # 新闻作者
-btn_news_node_author = 'com.songheng.eastnews:id/a5a'
+btn_news_node_author = 'com.ttyouqu.app:id/tv_from'
 # 视频页按钮
 btn_video = 'com.songheng.eastnews:id/km'
 # 视频列表
@@ -34,7 +34,7 @@ vedio_flag = 'com.songheng.eastfirst.business.video.view.widget.ijkplayer.h'
 # 继续赚钱
 btn_continue = 'com.songheng.eastnews:id/x1'
 # 领取顶部金币
-btn_receive = 'com.songheng.eastnews:id/asc'
+btn_receive = 'com.ttyouqu.app:id/tv_reward'
 
 # 无线连接手机，比较稳定
 # device_1 = connect_device('android:///192.168.199.196:48887?cap_method=javacap&touch_method=adb')
@@ -51,9 +51,9 @@ poco = AndroidUiautomationPoco(device_1, use_airtest_input=True, screenshot_each
 auto_setup(__file__)
 
 
-class DongFangTouTiao(object):
+class TianTianQuWen(object):
     """
-    东方头条
+    天天趣闻
     """
 
     def __init__(self):
@@ -438,5 +438,5 @@ class DongFangTouTiao(object):
 
 
 if __name__ == "__main__":
-    dftt = DongFangTouTiao()
+    dftt = TianTianQuWen()
     dftt.run()
