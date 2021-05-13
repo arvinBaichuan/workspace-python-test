@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+import sys
+sys.path.append("..")
 import scrapy
-from movie.items import MovieItem
-
+from items import MovieItem
 
 class MeijuSpider(scrapy.Spider):
     name = 'meiju'
